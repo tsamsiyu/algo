@@ -1,6 +1,6 @@
 const bubbleSort = require('./bubbleSort');
 const insertSort = require('./insertSort');
-const mergeSort = require('./mergeSort');
+const mergeSort = require('./mergeSort1');
 const utils = require('./utils');
 
 const inputs = utils.shuffleDigits(0, 20);

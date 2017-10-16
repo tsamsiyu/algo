@@ -23,6 +23,7 @@ module.exports = function (inputs) {
 
     console.log(inputs);
     console.log(splits);
+    return;
 
 	for (let splitI = 0; splitI < splits.length; splitI++) {
 		const lSize = splits[splitI][0];
