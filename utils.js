@@ -19,12 +19,21 @@ const shuffleDigits = function (from, to) {
 }
 
 const timer = (cb) => {
-	let start = (new Date).getTime();
+	let start, stop;
 	cb({
+		start: () => {
+			start  = (new Date).getTime();
+			stop = null;
+		},
 		reset: () => {
 			const startNow = start;
 			start = (new Date).getTime();
+			stop = null;
 			return start - startNow;
+		},
+		stop: () => {
+            stop = (new Date).getTime() - start;
+            return stop;
 		}
 	});
 }
